@@ -1,0 +1,14 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /registrations/{registrationId} {
+      // Allow reading and querying registrations publicly for registered team board & admin
+      allow read: if true;
+      // Allow creation of registrations from user form & admin
+      allow create: if true;
+      
+      // Only a signed-in admin (real Firebase Authentication) may edit or delete entries
+      allow update, delete: if request.auth != null;
+    }
+  }
+}

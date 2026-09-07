@@ -1,0 +1,6 @@
+{
+  "name": "Battle Club Registration",
+  "description": "Esports tournament registration portal for Battle Club featuring slot booking, squad roster entry, UPI payment integration, and instant battle pass generation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,45 @@
+{
+  "entities": {
+    "Registration": {
+      "title": "Registration",
+      "description": "Battle Club tournament registration record",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "registrationNumber": { "type": "string" },
+        "teamName": { "type": "string" },
+        "teamId": { "type": "string" },
+        "contactNumber": { "type": "string" },
+        "gameMode": { "type": "string", "enum": ["solo", "duo", "squad"] },
+        "slotDate": { "type": "string" },
+        "slotTime": { "type": "string" },
+        "map": { "type": "string" },
+        "players": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": { "type": "string" },
+              "inGameName": { "type": "string" },
+              "gameUid": { "type": "string" }
+            }
+          }
+        },
+        "paymentMethod": { "type": "string" },
+        "paymentUtr": { "type": "string" },
+        "paymentStatus": { "type": "string", "enum": ["confirmed", "pending"] },
+        "amount": { "type": "number" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["registrationNumber", "teamName", "contactNumber", "gameMode", "slotDate", "slotTime", "players", "paymentStatus", "amount", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/registrations/{registrationId}": {
+      "schema": {
+        "$ref": "#/entities/Registration"
+      },
+      "description": "All public and admin registrations"
+    }
+  }
+}

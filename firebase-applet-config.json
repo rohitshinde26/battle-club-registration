@@ -1,0 +1,12 @@
+{
+  "projectId": "battle-club-registration",
+  "appId": "1:875539416897:web:ec97db0a643d96fb4f43c0",
+  "apiKey": "AIzaSyDi8XsIU2fS_VXdr9ukFVEl1PvLMxxPFv0",
+  "authDomain": "battle-club-registration.firebaseapp.com",
+  "firestoreDatabaseId": "ai-studio-battleclubregist-be413eff-8a9c-44f3-a901-57cb02d80335",
+  "storageBucket": "battle-club-registration.firebasestorage.app",
+  "messagingSenderId": "875539416897",
+  "measurementId": "",
+  "oAuthClientId": "875539416897-6jkmpjhbrbtl4sgt31t1je2hefou1t6c.apps.googleusercontent.com",
+  "recaptchaSiteKey": ""
+}
